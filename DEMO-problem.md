@@ -485,7 +485,7 @@ The two runs are **independent** — the result of the first run does not affect
 ### Step 1 — Define the Events
 
 It is easier to first find the probability that both runs produce the **same** output (single combination only!), then subtract from 1.\
-Mathematically an event and its complement are mutually exclusive. \
+Mathematically, an event and its complement are mutually exclusive. \
 Here, assessing multiple combinations for different outputs is harder than identifying when both of them will be the same.\
 Let:
 - $E$ = the event that **both runs produce the same output**
