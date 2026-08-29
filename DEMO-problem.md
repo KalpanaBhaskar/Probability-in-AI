@@ -1,5 +1,5 @@
 # Large Language Models & Sampling
-### A Complete Beginner's Guide — From First Principles to the Math
+### From First Principles to the Math
 
 ---
 
