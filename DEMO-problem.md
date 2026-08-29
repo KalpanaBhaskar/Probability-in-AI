@@ -91,7 +91,7 @@ Before picking the next word, the model calculates a probability for every word 
 
 This approach — always picking the single highest probability word — is called **Greedy Decoding**. It sounds reasonable, but it causes two serious problems:
 
-### Problem 1 — Repetitive Loops
+### Problem 1 — Repetitive Loops (might lead to infinite loop!)
 
 If the model always picks the safest, most likely word, it can get mathematically trapped repeating itself:
 
