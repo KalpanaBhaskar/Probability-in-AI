@@ -552,7 +552,7 @@ Notice also: the probability of "same output" is dominated by $p_1^2 = 0.1936$, 
 
 > Suppose you run the same model **$n$ times** with the same prompt. What is the probability that **at least two runs** produce the same output? How does this probability change as $n$ increases?
 >
-> *Hint: Think about the Birthday Problem. For large $n$, even rare coincidences become almost certain.*
+> *Hint: Think about the Birthday Problem. For large n, even rare coincidences become almost certain.*
 
 ---
 
