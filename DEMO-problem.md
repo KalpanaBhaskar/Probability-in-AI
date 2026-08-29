@@ -35,7 +35,7 @@ By repeating this prediction thousands of times, one word at a time, the model c
 
 Think of it as an extraordinarily advanced **autocomplete** system — one that has read hundreds of millions of books, articles, and websites.
 
-> 📌 **Key Insight:** An LLM does not look up facts like a search engine. It *generates* text by predicting what word statistically fits best, given everything it has seen before.
+> **NOTE:** An LLM does not look up facts like a search engine. It *generates* text by predicting what word statistically fits best, given everything it has seen before.
 
 ---
 
@@ -83,7 +83,7 @@ Before picking the next word, the model calculates a probability for every word 
 | pizza   | 4%          |
 | moon    | 1%          |
 
-> 💡 **Remember:** These percentages must all add up to exactly **100%** across the entire vocabulary (which can be 50,000+ words). The ones not shown here share the remaining 0%.
+>  **Remember:** These percentages must all add up to exactly **100%** across the entire vocabulary (which can be 50,000+ words). The ones not shown here share the remaining 0%.
 
 ---
 
@@ -222,7 +222,7 @@ $$P(\text{rug}) = \frac{7.39}{63.64} \approx \mathbf{11.6\%}$$
 
 $$P(\text{pizza}) = \frac{1.65}{63.64} \approx \mathbf{2.6\%}$$
 
-**Verification:** $85.8\% + 11.6\% + 2.6\% = 100\%$ ✅
+**Verification:** $85.8\% + 11.6\% + 2.6\% = 100\%$  (Success!)
 
 ---
 
@@ -246,7 +246,7 @@ That is the only change. Everything else stays the same. But this small change h
 | $T = 1$ | No change | Baseline behaviour |
 | $T > 1$ (e.g. 2.0) | Dividing by a large number makes logits **smaller** → gaps compressed | More random, creative, unpredictable |
 
-> 💡 **Key insight:** Temperature does not change *which* word has the highest probability — it changes *by how much* that word dominates over the others.
+> **NOTE:** Temperature does not change *which* word has the highest probability — it changes *by how much* that word dominates over the others.
 
 ---
 
@@ -368,8 +368,8 @@ Temperature is usually applied first to reshape the probability distribution. Th
 
 Always pick the word with the highest probability. Completely deterministic — same prompt always gives the same output.
 
-- ✅ Good for: factual Q&A, maths, structured tasks
-- ❌ Bad for: creativity, variety, avoiding repetition
+- Good for: factual Q&A, maths, structured tasks
+- Bad for: creativity, variety, avoiding repetition
 
 ### Top-K Sampling
 
@@ -384,8 +384,8 @@ From our list `{mat 60%, rug 20%, floor 15%, pizza 4%, moon 1%}`:
 → Re-normalise: mat ≈ 63.2%, rug ≈ 21.1%, floor ≈ 15.8%  
 → Sample from these three
 
-- ✅ Prevents wild, nonsensical word choices
-- ❌ Fixed K can be too tight (when the model is uncertain) or too loose (when it is very confident)
+- Prevents wild, nonsensical word choices
+- Fixed K can be too tight (when the model is uncertain) or too loose (when it is very confident)
 
 ### Top-P (Nucleus) Sampling
 
@@ -476,7 +476,7 @@ Every single word in the output goes through this entire pipeline. That is why a
 | 4        | counting outcomes  | 0.13              |
 | 5        | robot puppies      | 0.09              |
 
-**Sanity check:** $0.44 + 0.20 + 0.14 + 0.13 + 0.09 = 1.00$ ✅
+**Check point:** $0.44 + 0.20 + 0.14 + 0.13 + 0.09 = 1.00$ 
 
 The two runs are **independent** — the result of the first run does not affect the second run at all.
 
@@ -544,11 +544,11 @@ There is a **72% chance** that running the same prompt twice produces two differ
 
 Notice also: the probability of "same output" is dominated by $p_1^2 = 0.1936$, since "electric sheep" is the most likely output. Even so, there is only a 28% chance of matching. When probabilities are spread across many outputs, collisions become rare.
 
-> 💡 **Bonus insight:** The formula $\sum p_i^2$ is known in statistics as the **sum of squared probabilities**, and its complement $1 - \sum p_i^2$ measures the diversity of a distribution. The more evenly spread the probabilities, the higher the diversity — and the more likely you are to get different outputs on each run.
+> **NOTE :** The formula $\sum p_i^2$ is known in statistics as the **sum of squared probabilities**, and its complement $1 - \sum p_i^2$ measures the diversity of a distribution. The more evenly spread the probabilities, the higher the diversity — and the more likely you are to get different outputs on each run.
 
 ---
 
-## Take-Home Challenge
+## Try It Out!
 
 > Suppose you run the same model **$n$ times** with the same prompt. What is the probability that **at least two runs** produce the same output? How does this probability change as $n$ increases?
 >
