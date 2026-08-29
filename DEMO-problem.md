@@ -10,7 +10,7 @@
 3. [How Does an LLM Pick the Next Word?](#3-how-does-an-llm-pick-the-next-word)
 4. [Why Not Always Pick the Most Likely Word?](#4-why-not-always-pick-the-most-likely-word)
 5. [How Are Probabilities Actually Calculated?](#5-how-are-probabilities-actually-calculated)
-6. [The Softmax Function — Full Math](#6-the-softmax-function--full-math)
+6. [The Softmax Function ](#6-the-softmax-function)
 7. [Temperature — The Creativity Dial](#7-temperature--the-creativity-dial)
 8. [Other Sampling Techniques](#8-other-sampling-techniques)
 9. [Putting It All Together](#9-putting-it-all-together)
