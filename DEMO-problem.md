@@ -174,7 +174,7 @@ Next Token Output
 
 ---
 
-## 6. The Softmax Function — Full Math
+## 6. The Softmax Function 
 
 ### What It Does
 
