@@ -19,11 +19,9 @@
 
 ## 0. Where We Are and What You Need
 
-Slides 15 and 16 are marked **[if extra time]** on slide 14. They are an optional extension, but they reuse the rules from the main week, so they are worth doing carefully.
-
 You need these tools from the main Week 1 notes:
 
-| Tool | Where it was used | Formula |
+| Tool | Usecase | Formula |
 |---|---|---|
 | Complement rule | "At least one" problems | $P(E^C) = 1 - P(E)$ |
 | Independence | Repeated calls to the same model | $P(A \text{ and } B) = P(A) \cdot P(B)$ |
